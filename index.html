@@ -9,8 +9,15 @@
 <body>
 
 <nav>
-    <h2>N. Naga Ajay</h2>
-    <ul>
+    <div class="logo">
+        N. Naga Ajay
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -35,6 +42,16 @@
         <a href="https://www.linkedin.com/in/ajay-nematapalli-ba58a7384/">LinkedIn</a>
     </p>
 </footer>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("nav-links");
 
+    if(menu.style.display === "flex"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
 </body>
 </html>
